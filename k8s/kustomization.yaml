@@ -13,6 +13,7 @@ namespace: myapp
 
 # Reference subdirectories (each has its own kustomization.yaml)
 resources:
+  - namespace.yaml
   - api/
   - db/
   - cache/
