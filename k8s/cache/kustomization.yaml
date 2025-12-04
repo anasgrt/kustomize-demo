@@ -1,0 +1,11 @@
+# k8s/cache/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  app: cache
+  tier: backend
+
+resources:
+  - cache-deployment.yaml
+  - cache-service.yaml

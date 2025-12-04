@@ -1,0 +1,11 @@
+# k8s/db/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  app: database
+  tier: backend
+
+resources:
+  - db-depl.yaml
+  - db-service.yaml

@@ -1,0 +1,19 @@
+# k8s/kustomization.yaml
+# Root kustomization that aggregates all components
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Common labels applied to ALL resources in all subdirectories
+commonLabels:
+  app.kubernetes.io/managed-by: kustomize
+  environment: dev
+
+# Common namespace for all resources
+namespace: myapp
+
+# Reference subdirectories (each has its own kustomization.yaml)
+resources:
+  - api/
+  - db/
+  - cache/
+  - kafka/

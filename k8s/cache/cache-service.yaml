@@ -1,0 +1,13 @@
+# k8s/cache/cache-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+spec:
+  type: ClusterIP
+  selector:
+    app: cache
+  ports:
+    - port: 6379
+      targetPort: 6379
+      protocol: TCP

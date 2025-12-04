@@ -1,0 +1,11 @@
+# k8s/kafka/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  app: kafka
+  tier: messaging
+
+resources:
+  - kafka-deployment.yaml
+  - kafka-service.yaml
